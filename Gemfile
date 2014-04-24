@@ -49,3 +49,7 @@ gem 'unicorn'
   gem 'rails_12factor', '0.0.2'
 end
 
+group :development do
+  gem 'sqlite3'
+end
+
