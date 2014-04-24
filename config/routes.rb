@@ -4,5 +4,6 @@ FinanceTracker::Application.routes.draw do
 
   root :to => 'yahoo#home'
 
+   post "update", to: "yahoo#update"
 
 end
