@@ -1,0 +1,9 @@
+<%= form_for :stocks, :url => url_for(:controller => 'yahoo', :action => 'create', method: :post) do |f| %>
+
+<h3>Enter the Stock's Symbol to add it to your portfolio</h3>
+ <p >
+  <%= f.label :symbol %>
+  <input name="symbol" type="text" />
+ </p>
+<%= f.submit %>
+  <% end %>
