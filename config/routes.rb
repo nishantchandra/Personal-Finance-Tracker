@@ -4,7 +4,10 @@ FinanceTracker::Application.routes.draw do
 
   get "new", to: "yahoo#new"
   get "update", to: "yahoo#update"
+  get "destroy", to: "yahoo#test"
+  post "delete", to: "yahoo#delete"
   root :to => 'yahoo#home'
+
    # post "update", to: "yahoo#update"
 
-end
+  end
