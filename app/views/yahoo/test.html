@@ -1,0 +1,16 @@
+
+
+<%= form_for :yahoo, url: delete_path, method: :post,  class: "form-horizontal" do |f| %>
+
+
+
+<h3>Enter the Stock's Symbol to remove it from your portfolio</h3>
+ <p >
+  <%= f.label :symbol %>
+  <input name="currentstock" type="text" />
+ </p>
+<button name="button" type="submit">Delete</button>
+
+<% end %>
+</form>
+

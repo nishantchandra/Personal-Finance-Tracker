@@ -31,7 +31,16 @@ class YahooController < ApplicationController
       @stock = Stocks.new
     end
 
-    def delete
+    def test
 
     end
+
+    def delete
+    stock = Stocks.find_by(symbol: params[:currentstock])
+    if stock.destroy
+      redirect_to '/'
+    else
+      redirect_to new_yahoo
+    end
+   end
 end
