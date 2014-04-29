@@ -4,15 +4,30 @@
   <tr>
     <th>Stock Symbol</th>
     <th>Current Price</th>
+    <th>Yesterday's Closing Price</th>
     <th>Current PE Ratio</th>
     <th>Current Beta</th>
   <tr>
-  <tr>
+    <% until @counter == @stocks.length %>
+   <!-- <% @data.each do |y| %> -->
+      <tr>
+
+        <td><%= @data[@counter][0].symbol %></td>
+        <td><%= @data[@counter][0].last_trade_price %></td>
+        <td><%= @data[@counter][0].previous_close %></td>
+        <td><%= @data[@counter][0].pe_ratio %></td>
+        <td><%= @data[@counter][0].change_in_percent %></td>
+        <% @counter = @counter + 1 %>
+      </tr>
+
+    <!-- <% end %> -->
+   <% end %>
+  <!--  <tr>
     <td>Yahoo</td>
     <td>55</td>
     <td>.5</td>
     <td>1</td>
-  </tr>
+  </tr> -->
 
 
 
