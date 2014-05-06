@@ -16,7 +16,7 @@
         <td><%= @data[@counter][0].last_trade_price %></td>
         <td><%= @data[@counter][0].previous_close %></td>
         <td><%= @data[@counter][0].pe_ratio %></td>
-        <td><%= @data[@counter][0].change_in_percent %></td>
+        <td><%= @data[@counter][0].change_in_percent.gsub!(/\A"|"\Z/, '') %></td>
         <% @counter = @counter + 1 %>
       </tr>
 
