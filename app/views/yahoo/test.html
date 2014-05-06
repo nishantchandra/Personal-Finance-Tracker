@@ -1,15 +1,18 @@
-
+<ul id="bar" class="nav nav-pills">
+<li><a href="/" id="home" class="button update">Home</a></li>
+<li><a href="/new" id="new" class="button update">Add a Stock</a></li>
+</ul>
 
 <%= form_for :yahoo, url: delete_path, method: :post,  class: "form-horizontal" do |f| %>
 
 
 
-<h3>Enter the Stock's Symbol to remove it from your portfolio</h3>
- <p >
+<h1>Enter the Stock's Symbol to remove it from your portfolio</h1>
+ <p id="input" >
   <%= f.label :symbol %>
-  <input name="currentstock" type="text" />
+  <input name="currentstock" type="text" id="textfield" />
  </p>
-<button name="button" type="submit">Delete</button>
+<button name="button" type="submit" id="button" class="btn btn-primary btn-lg">Delete</button>
 
 <% end %>
 </form>
