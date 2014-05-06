@@ -1,0 +1,28 @@
+
+#bar li a:hover {
+  color: white !important;
+  background-color: #87CEEB !important;
+}
+
+#input{
+  text-align: center;
+  margin-top: 45px;
+}
+
+#textfield{
+  width: 300px;
+  height: 68px;
+}
+
+h1{
+  text-align: center;
+  margin-top: 120px;
+}
+#button,#wrapperDiv{
+  margin-left: 1318px !important;
+  margin-top: 5px !important;
+}
+.btn btn-primary btn-lg{
+ margin-left: 1318px !important;
+}
+
