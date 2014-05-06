@@ -1,4 +1,9 @@
-<li><a href="/update" id="update" class="button update">Update</a></li>
+<!-- <li><a href="/update" id="update" class="button update">Update</a></li> -->
+<ul id="bar" class="nav nav-pills">
+<li><a href="/new" id="new" class="button update">Add a Stock</a></li>
+<li><a href="/destroy" id="destroy" class="button update">Delete a Stock</a></li>
+</ul>
+
 
 <table class="table table-hover">
   <tr>
@@ -16,7 +21,7 @@
         <td><%= @data[@counter][0].last_trade_price %></td>
         <td><%= @data[@counter][0].previous_close %></td>
         <td><%= @data[@counter][0].pe_ratio %></td>
-        <td><%= @data[@counter][0].change_in_percent %></td>
+        <td><%= @data[@counter][0].change_in_percent.gsub!(/\A"|"\Z/, '') %></td>
         <% @counter = @counter + 1 %>
       </tr>
 

@@ -1,9 +1,17 @@
+<ul id="bar" class="nav nav-pills">
+<li><a href="/" id="home" class="button update">Home</a></li>
+<li><a href="/destroy" id="destroy" class="button update">Delete a Stock</a></li>
+</ul>
+
+
+
 <%= form_for :stocks, :url => url_for(:controller => 'yahoo', :action => 'create', method: :post) do |f| %>
 
-<h3>Enter the Stock's Symbol to add it to your portfolio</h3>
- <p >
+<h1>Enter the Stock's Symbol to add it to your portfolio</h1>
+ <p id="input" >
   <%= f.label :symbol %>
-  <input name="symbol" type="text" />
+  <input name="symbol" type="text" id="textfield" />
  </p>
-<%= f.submit %>
-  <% end %>
+ <div id="wrapperDiv">
+<%= f.submit 'Save', :class => 'btn btn-primary btn-lg' %>  <% end %>
+</div>
